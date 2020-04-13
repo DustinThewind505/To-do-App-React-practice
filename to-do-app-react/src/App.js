@@ -10,14 +10,16 @@ function App() {
   const [notes, setNote] = useState([{
     id: 1,
     title: 'Title',
-    body: 'Note'
+    body: 'Note',
+    complete: false
   }])
 
   const addNewNote = note => {
     const newNote = {
       id: Date.now(),
       title: note.title,
-      body: note.body
+      body: note.body,
+      complete: false
     }
 
     setNote([...notes, newNote])

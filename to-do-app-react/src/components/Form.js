@@ -13,7 +13,7 @@ const Form = props => {
 
     const handleSubmit = event => {
       event.preventDefault();
-      props.addNewNote(note)
+      props.addNewNote(note);
     }
 
     return(
@@ -25,6 +25,7 @@ const Form = props => {
                 <label>
                     Note: <textarea onChange={handleChange} name="body"/>
                 </label>
+                <button type="submit">Add Note</button>
             </form>
             <h1>{heading}</h1>
         </div>
