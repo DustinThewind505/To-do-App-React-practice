@@ -10,7 +10,12 @@ const Form = () => {
     return(
         <div>
             <form>
-                <input onChange={handleChange}/>
+                <label>
+                Title: <input onChange={handleChange}/>
+                </label>
+                <label>
+                    Note: <textarea />
+                </label>
             </form>
             <h1>{heading}</h1>
         </div>
