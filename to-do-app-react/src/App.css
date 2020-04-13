@@ -48,11 +48,11 @@ form label {
   align-items: center;
 }
 
-section {
+.section {
   width: 50%;
   background-color: hotpink;
 }
 
-section h2  {
+.section h2  {
   text-decoration: underline;
 }

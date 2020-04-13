@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const Form = props => {
     const [heading, setHeading] = useState('')
+    const [note, setNote] = useState({
+      title: '',
+      body: ''
+    })
 
     const handleChange = event => {
-        setHeading(event.target.value)
+        setNote({...note, [event.target.name]: event.target.value})
+    }
+
+    const handleSubmit = event => {
+      event.preventDefault();
+      props.addNewNote(note)
     }
 
     return(
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
-                Title: <input onChange={handleChange}/>
+                Title: <input onChange={handleChange} name="title"/>
                 </label>
                 <label>
-                    Note: <textarea />
+                    Note: <textarea onChange={handleChange} name="body"/>
                 </label>
             </form>
             <h1>{heading}</h1>

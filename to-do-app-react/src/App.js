@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from "react-dom";
 
 import Form from './components/Form';
 import Note from './components/Note';
@@ -6,18 +7,28 @@ import './App.css';
 
 function App() {
 
-  const [note, setNote] = useState([{
+  const [notes, setNote] = useState([{
     id: 1,
     title: 'Title',
     body: 'Note'
   }])
 
+  const addNewNote = note => {
+    const newNote = {
+      id: Date.now(),
+      title: note.title,
+      body: note.body
+    }
+
+    setNote([...notes, newNote])
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src="http://pngimg.com/uploads/birds/birds_PNG108.png" className="App-logo" alt="logo" />
-        <Form />
-        <Note note={note}/>
+        <Form addNewNote={addNewNote}/>
+        <Note notes={notes}/>
       </header>
       
     </div>
