@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Form from './components/Form';
 import './App.css';
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src="http://pngimg.com/uploads/birds/birds_PNG108.png" className="App-logo" alt="logo" />
+        <Form />
       </header>
     </div>
   );
