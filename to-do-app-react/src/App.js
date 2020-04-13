@@ -25,12 +25,27 @@ function App() {
     setNote([...notes, newNote])
   }
 
+  const toggleComplete = clickedId => {
+    const newList = notes.map(element => {
+      if(clickedId === element.id) {
+        return {
+          ...element,
+          complete: !element.complete
+        }
+      } else {
+        return element
+      }
+    })
+
+    setNote(newList)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src="http://pngimg.com/uploads/birds/birds_PNG108.png" className="App-logo" alt="logo" />
         <Form addNewNote={addNewNote}/>
-        <Note notes={notes}/>
+        <Note notes={notes} toggleComplete={toggleComplete}/>
       </header>
       
     </div>
