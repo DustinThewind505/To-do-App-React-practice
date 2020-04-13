@@ -9,7 +9,7 @@ const Note = props => {
             {props.notes.map(element => (
                 <div className="note complete" key={element.id}>
                     <h2>{element.title}</h2>
-                    <h3>{element.body}</h3>
+                    <p>{element.body}</p>
                 </div>
             ))}
         </section>

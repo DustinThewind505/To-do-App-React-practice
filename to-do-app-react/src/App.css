@@ -54,18 +54,30 @@ form label {
   align-items: center;
 }
 
-.section {
+section {
   width: 100%;
   background-color: hotpink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.section h2  {
+section h2  {
   text-decoration: underline;
 }
 
 .note {
-  width: 100%;
-  padding: 2%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  background-color: brown;
+  margin: 1%;
+}
+
+.note p {
+  background-color: red;
+  padding: 1%;
 }
 
 .complete {
