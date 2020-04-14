@@ -40,12 +40,19 @@ function App() {
     setNote(newList)
   }
 
+  const clearComplete = () => {
+    setNote(notes.filter(note => note.complete === false))
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src="http://pngimg.com/uploads/birds/birds_PNG108.png" className="App-logo" alt="logo" />
+        <div onClick={clearComplete}>
+        <img src="http://pngimg.com/uploads/birds/birds_PNG108.png" className="App-logo" alt="logo" onClick={clearComplete}/>
+        </div>
         <Form addNewNote={addNewNote}/>
         <Note notes={notes} toggleComplete={toggleComplete}/>
+        <button onClick={clearComplete}>Clear</button>
       </header>
       
     </div>
