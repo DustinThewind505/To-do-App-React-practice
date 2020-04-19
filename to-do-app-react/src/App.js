@@ -1,62 +1,54 @@
 import React, { useState } from 'react';
-import ReactDOM from "react-dom";
 
 import Form from './components/Form';
 import Note from './components/Note';
+
 import './App.css';
 
-function App() {
-
-  const [notes, setNote] = useState([{
+const App = () => {
+  const [notes, setNotes] = useState([{
     id: 1,
     title: 'Title',
-    body: 'Note',
+    body: 'Body of a body of a body of a body of a body of a body of a body',
     complete: false
   }])
 
   const addNewNote = note => {
-    const newNote = {
-      id: Date.now(),
-      title: note.title,
-      body: note.body,
-      complete: false
-    }
+    setNotes([
+      ...notes, 
+      {
+        id: Date.now(),
+        title: note.title,
+        body: note.body,
+        complete: false
+      }
+    ])
+  }
 
-    setNote([...notes, newNote])
+  const handleClear = () => {
+   setNotes(notes.filter(element => element.complete === false))
   }
 
   const toggleComplete = clickedId => {
-    const newList = notes.map(element => {
-      if(clickedId === element.id) {
-        return {
-          ...element,
-          complete: !element.complete
-        }
+    setNotes(notes.map(element => {
+      if(element.id === clickedId) {
+        return {...element, complete: !element.complete}
       } else {
         return element
       }
-    })
-
-    setNote(newList)
-  }
-
-  const clearComplete = () => {
-    setNote(notes.filter(note => note.complete === false))
+    }))
   }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div onClick={clearComplete}>
-        <img src="http://pngimg.com/uploads/birds/birds_PNG108.png" className="App-logo" alt="logo" onClick={clearComplete}/>
-        </div>
+      <div className="App-header">
+        <h1>Ello Poppet</h1>
         <Form addNewNote={addNewNote}/>
-        <Note notes={notes} toggleComplete={toggleComplete}/>
-        <button onClick={clearComplete}>Clear</button>
-      </header>
-      
+        <Note notes={notes} toggleComplete={toggleComplete} />
+        <button type="submit" onClick={handleClear}>Clear</button>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
