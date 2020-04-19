@@ -42,10 +42,10 @@ const App = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <h1>Ello Poppet</h1>
+        <h1>To Do App</h1>
         <Form addNewNote={addNewNote}/>
-        <Note notes={notes} toggleComplete={toggleComplete} />
         <button type="submit" onClick={handleClear}>Clear</button>
+        <Note notes={notes} toggleComplete={toggleComplete} />
       </div>
     </div>
   )

@@ -23,17 +23,19 @@ const Form = props => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="note-example">
+        <div className="form-left">
           <h2>{note.title}</h2>
           <p>{note.body}</p>
         </div>
-        <label>
-          Title: <input name="title" onChange={handleChange} value={note.title} />
-        </label>
-        <label>
-          Note: <textarea name="body" onChange={handleChange} value={note.body} />
-        </label>
-        <button type="submit">Submit</button>
+        <div className="form-right">
+          <label>
+            Title:  <input name="title" onChange={handleChange} value={note.title} />
+          </label>
+          <label>
+            Note: <textarea name="body" onChange={handleChange} value={note.body} />
+          </label>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   )
