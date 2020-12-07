@@ -4,16 +4,13 @@ import Grocery from './Grocery';
 
 
 function GroceryList(props) {
-    // ============ STATE ============
-
-    // ============ FUNCTIONS ============
 
 
     // ============ COMPONENT ============
     return (
         <>
-            <div className='grocery-list'>{props.groceries.map(element => <Grocery grocery={element} />)}</div>
-            <button>Clear</button>
+            <div className='grocery-list'>{props.groceries.map(element => <Grocery grocery={element} toggleComplete={props.toggleComplete} />)}</div>
+            <button onClick={() => props.clearComplete()}>Clear</button>
         </>
     )
 }

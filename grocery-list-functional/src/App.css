@@ -42,7 +42,11 @@ h1 {
 }
 
 form {
-  margin: 5%;
+  margin: 4%;
+}
+
+input {
+  font-size: 2rem;
 }
 
 .grocery-list {
@@ -55,5 +59,11 @@ form {
 
 .grocery {
   width: 49%;
+  margin: 0.5% 0;
   background-color: red;
+}
+
+.complete {
+  text-decoration: line-through;
+  background-color: darkred;
 }
