@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-export default class SearchForm extends React.Component {
+class SearchForm extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -11,14 +11,37 @@ export default class SearchForm extends React.Component {
     }
 
 
-    render() {
-        console.log(this.props)
+
+    handleChange = e => {
+        const newFormState = e.target.value
+
+        this.setState({
+            searchInput:  newFormState
+        })
+    }
+
+    handleSubmit = e => {
+        e.preventDefault()
+
+        this.props.addNewItem(this.state.searchInput)
+
+        this.setState({
+            searchInput: ""
+        })
+    }
+
+
+
+
+    render () {
         return(
-            <form onSubmit={this.props.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <lable>
-                    <input type='search' />
+                    <input value={this.state.searchInput} onChange={this.handleChange} />
                 </lable>
             </form>
         )
     }
 }
+
+export default SearchForm;

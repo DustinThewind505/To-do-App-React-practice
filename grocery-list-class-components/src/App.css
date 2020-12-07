@@ -39,12 +39,20 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .grocery {
   width: 49%;
-  background-color: firebrick;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5% 0;
+  padding-top: 1%;
+  padding-bottom: 1.5%;
+  font-size: 2rem;
+  background-color: crimson;
 }
 
 form {
@@ -58,4 +66,9 @@ input {
 
 button {
   padding: 0.5% 5%;
+}
+
+.complete {
+  background-color: darkred;
+  text-decoration: line-through;
 }

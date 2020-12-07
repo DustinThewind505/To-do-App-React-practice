@@ -6,8 +6,8 @@ function Grocery(props) {
 
 
 
-    return(
-        <div className='grocery'>
+    return (
+        <div onClick={() => props.toggleComplete(props.grocery.id)} className={`grocery ${props.grocery.complete === true ? 'complete' : ''}`}>
             <p>{props.grocery.item}</p>
         </div>
     )
