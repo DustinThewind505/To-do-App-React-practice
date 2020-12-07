@@ -16,11 +16,13 @@
 }
 
 .App-header {
+  width: 100%;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-bottom: 2px solid black;
 }
 
 @keyframes App-logo-spin {
@@ -33,6 +35,27 @@
 }
 
 /* ============ Start my CSS ============ */
-h1 {
+.grocery-list {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
+}
+
+.grocery {
+  width: 49%;
+  background-color: firebrick;
+}
+
+form {
+  width: 100%;
+  margin: 5% 0;
+}
+
+input {
+  font-size: 1.3rem;
+}
+
+button {
+  padding: 0.5% 5%;
 }

@@ -1,1 +1,1 @@
-export { default as Groceries } from './GroceryList';
+export { default as GroceryList } from './GroceryList';
