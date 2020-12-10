@@ -1,15 +1,16 @@
 import React from 'react';
+import Note from './Note';
 
 
 
-function NotesContainer() {
+function NotesContainer({notes}) {
 
 
 
 
     return(
-        <div className='note-list'>
-            <h2>Ello Poppet</h2>
+        <div className='notes-container'>
+            {notes.map(note => <Note note={note}/>)}
         </div>
     )
 }
