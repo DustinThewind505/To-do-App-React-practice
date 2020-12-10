@@ -3,15 +3,18 @@ import Note from './Note';
 
 
 
-function NotesContainer({notes}) {
+function NotesContainer({notes, toggleComplete}) {
 
 
 
 
     return(
+        <>
+        <h2>Notes</h2>
         <div className='notes-container'>
-            {notes.map(note => <Note note={note}/>)}
+            {notes.map(note => <Note note={note} toggleComplete={toggleComplete} />)}
         </div>
+        </>
     )
 }
 
