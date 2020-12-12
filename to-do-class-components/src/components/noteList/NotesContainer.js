@@ -1,17 +1,20 @@
 // ============ IMPORTS ============
 import React from 'react';
+import Note from './Note';
 
 
 
 
-function NotesContainer() {
-    // ============ STATE ============
-
-    // ============ FUNCTIONS ============
+function NotesContainer(props) {
 
     // ============ COMPONENT ============
-    return(
-        <h2>Ello Poppet</h2>
+    return (
+        <>
+        <div className='notes-container'>
+            {props.notes.map(note => <Note note={note} toggleComplete={props.toggleComplete} />)}
+        </div>
+        <button onClick={props.clearComplete}>Clear Complete</button>
+        </>
     )
 }
 
