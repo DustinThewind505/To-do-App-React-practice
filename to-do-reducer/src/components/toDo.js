@@ -2,14 +2,14 @@ import React from "react";
 
 
 
-function ToDo() {
+function ToDo(props) {
 
 
 
 
     return (
-        <div>
-            <h3>Ello Poppet</h3>
+        <div className='todo'>
+            <h3>{props.todo.todo}</h3>
         </div>
     )
 }

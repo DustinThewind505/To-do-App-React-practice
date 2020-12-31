@@ -3,16 +3,20 @@ import React from "react";
 import ToDo from './toDo';
 
 
-function ToDoContainer() {
+function ToDoContainer(props) {
 
 
-
+console.log(props.toDoState)
 
     return (
-        <section>
-            <h2>Ello Poppet</h2>
-            <ToDo />
+        <>
+        <p>{Date()}</p>
+        <section className='todo-container'>
+            {props.toDoState.todos.map((todo, index) => 
+                <ToDo key={index} todo={todo} />
+            )}
         </section>
+        </>
     )
 }
 

@@ -40,3 +40,22 @@ header {
   align-items: center;
   background-color: dodgerblue;
 }
+
+input {
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.todo-container {
+  width: 95%;
+  margin: 2% auto 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.todo {
+  width: 48%;
+  margin: 0.5% 0;
+  background-color: dodgerblue;
+}
