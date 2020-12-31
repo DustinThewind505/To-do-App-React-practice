@@ -13,7 +13,7 @@ console.log(props.toDoState)
         <p>{Date()}</p>
         <section className='todo-container'>
             {props.toDoState.todos.map((todo, index) => 
-                <ToDo key={index} todo={todo} />
+                <ToDo key={index} todo={todo} dispatch={props.dispatch} />
             )}
         </section>
         </>

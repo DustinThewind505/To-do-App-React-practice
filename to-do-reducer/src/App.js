@@ -15,8 +15,8 @@ function App() {
         <h1>TO-DO App</h1>
         <ToDoInput dispatch={dispatch} />
       </header>
-      <ToDoContainer toDoState={toDoState} />
-      <button>Clear</button>
+      <ToDoContainer toDoState={toDoState} dispatch={dispatch} />
+      <button onClick={() =>  dispatch({ type: 'CLEAR_COMPLETE'})} >Clear</button>
     </div>
   );
 }

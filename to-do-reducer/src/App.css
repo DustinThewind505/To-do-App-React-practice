@@ -59,3 +59,9 @@ input {
   margin: 0.5% 0;
   background-color: dodgerblue;
 }
+
+.complete {
+  text-decoration: line-through;
+  color: dodgerblue;
+  background-color: purple;
+}
