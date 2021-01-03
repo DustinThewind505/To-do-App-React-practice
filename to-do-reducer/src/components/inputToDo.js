@@ -22,8 +22,7 @@ function ToDoInput(props) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input placeholder="Ello Poppet" value={inputState} onChange={handleChange} />
-            <p>{inputState}</p>
+            <input placeholder="enter task" value={inputState} onChange={handleChange} />
         </form>
     )
 }

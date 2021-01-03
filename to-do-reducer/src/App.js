@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header>
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>TO-DO App</h1>
+        <h1>TO-DO App ✅</h1>
         <ToDoInput dispatch={dispatch} />
       </header>
       <ToDoContainer toDoState={toDoState} dispatch={dispatch} />

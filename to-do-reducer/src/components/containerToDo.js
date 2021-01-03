@@ -6,7 +6,6 @@ import ToDo from './toDo';
 function ToDoContainer(props) {
 
 
-console.log(props.toDoState)
 
     return (
         <>
