@@ -64,7 +64,7 @@ function App() {
       <header className="App-header">
        <h1>Notes App</h1>
       </header>
-      <Form addNewNote={addNewNote} clearComplete={clearComplete} />
+      <Form addNewNote={addNewNote} />
       <Notes notes={notes} toggleComplete={toggleComplete} />
       <button onClick={clearComplete} >Clear Complete</button>
     </div>
